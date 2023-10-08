@@ -1,0 +1,13 @@
+Check for the url of OS repo: (example) http://www.raspbian.org/RaspbianRepository
+sudo nano /etc/apt/sources.list
+deb http://archive.raspbian.org/raspbian <distribution name> main contrib non-free
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+sudo apt-get autoremove
+
+If all of the above is successful, reboot:
+sudo reboot
+
+
