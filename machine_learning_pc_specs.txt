@@ -1,0 +1,382 @@
+HardInfo - System profiler and benchmark for Linux systems.
+
+DESCRIPTION
+       Is  a system profiler and benchmark for Linux systems, that gathers information about the hardware and operating system, performs benchmarks, and generates reports.  The information gathered is presented on an simple and intu‐
+       itive GUI.
+
+       Information is grouped in four main groups: Computer, Devices, Network, and Benchmarks.
+
+       The Computer group contains mostly information about basic software.  This includes but is not limited to information about the operating system (kernel version, C library, distribution, etc.), kernel modules, locale  informa‐
+       tion, filesystem usage, users/groups, and development tools.
+
+       The  Devices  group  contains  information  about the hardware, as detected by the operating system.  Hardinfo is incapable of detecting hardware by itself, it merely lists what the operating system was able to find.  This in‐
+       cludes, but does not limit to, information about the processor (including cache layout, known bugs, and feature flags with their explanation), devices (such as USB, PCI, and Input devices), among other things.
+
+       The Network group lists information about network interfaces, routing table, DNS servers, and other networking-related topics.
+
+       The Benchmarks group allow performing simple benchmarks to test CPU and FPU capabilities, as well as some of the graphical user interface capabilities as well.  In previous versions, it was possible to send the  benchmark  re‐
+       sults to a central server, so it was possible to compare the benchmarks with other Hardinfo users; this service has been deactivated in the mean time.
+
+       Reports  can  be generated either by invoking Hardinfo with special command-line parameters (see below), or by clicking the "Generate Report" button in the GUI.  Reports can be customized in the GUI and saved in either HTML or
+       plain text formats.
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+daryl@daryl-old-pc:~/Documents/3060_GPU_PC$ sudo hardinfo > computer_specs.txt
+
+[CPU Blowfish]
+System_Version___SABERTOOTH_X58_(ASUSTeK_Computer_INC_);Intel(R)_Core(TM)_i7_CPU_________950____3_07GHz;24544_00=2.540474; 2.540474; 8|8|System Version / SABERTOOTH X58 (ASUSTeK Computer INC.)|Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz|1 physical processor; 4 cores; 8 threads|8x 3068.00 MHz|18396832|1|4|8|(Unknown)
+[CPU CryptoHash]
+System_Version___SABERTOOTH_X58_(ASUSTeK_Computer_INC_);Intel(R)_Core(TM)_i7_CPU_________950____3_07GHz;24544_00=472.157107; 0.660797; 8|8|System Version / SABERTOOTH X58 (ASUSTeK Computer INC.)|Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz|1 physical processor; 4 cores; 8 threads|8x 3068.00 MHz|18396832|1|4|8|(Unknown)
+[CPU Fibonacci]
+System_Version___SABERTOOTH_X58_(ASUSTeK_Computer_INC_);Intel(R)_Core(TM)_i7_CPU_________950____3_07GHz;24544_00=0.714237; 0.714237; 1|1|System Version / SABERTOOTH X58 (ASUSTeK Computer INC.)|Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz|1 physical processor; 4 cores; 8 threads|8x 3068.00 MHz|18396832|1|4|8|(Unknown)
+[CPU N-Queens]
+System_Version___SABERTOOTH_X58_(ASUSTeK_Computer_INC_);Intel(R)_Core(TM)_i7_CPU_________950____3_07GHz;24544_00=8.586158; 8.586158; 8|8|System Version / SABERTOOTH X58 (ASUSTeK Computer INC.)|Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz|1 physical processor; 4 cores; 8 threads|8x 3068.00 MHz|18396832|1|4|8|(Unknown)
+[CPU Zlib]
+System_Version___SABERTOOTH_X58_(ASUSTeK_Computer_INC_);Intel(R)_Core(TM)_i7_CPU_________950____3_07GHz;24544_00=0.643285; 6.062627; 8|8|System Version / SABERTOOTH X58 (ASUSTeK Computer INC.)|Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz|1 physical processor; 4 cores; 8 threads|8x 3068.00 MHz|18396832|1|4|8|(Unknown)
+[FPU FFT]
+System_Version___SABERTOOTH_X58_(ASUSTeK_Computer_INC_);Intel(R)_Core(TM)_i7_CPU_________950____3_07GHz;24544_00=2.274314; 2.274314; 4|4|System Version / SABERTOOTH X58 (ASUSTeK Computer INC.)|Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz|1 physical processor; 4 cores; 8 threads|8x 3068.00 MHz|18396832|1|4|8|(Unknown)
+[FPU Raytracing]
+System_Version___SABERTOOTH_X58_(ASUSTeK_Computer_INC_);Intel(R)_Core(TM)_i7_CPU_________950____3_07GHz;24544_00=2.905560; 2.905560; 8|8|System Version / SABERTOOTH X58 (ASUSTeK Computer INC.)|Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz|1 physical processor; 4 cores; 8 threads|8x 3068.00 MHz|18396832|1|4|8|(Unknown)
+
+Computer
+********
+
+
+Summary
+-------
+
+-Computer-
+Processor               : Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz
+Memory          : 18396MB (2037MB used)
+Machine Type            : Desktop
+Operating System                : Ubuntu 22.04.3 LTS
+User Name               : root (root)
+Date/Time               : Tue 31 Oct 2023 05:33:33 PM MDT
+-Display-
+Resolution              : 0x0 pixels
+OpenGL Renderer         : (Unknown)
+X11 Vendor              : (null)
+-Audio Devices-
+Audio Adapter           : HDA-Intel - HDA Intel
+Audio Adapter           : HDA-Intel - HDA NVidia
+-Input Devices-
+ Power Button
+ Power Button
+ Logitech Wireless Keyboard PID:4023
+ Logitech Wireless Mouse
+ HDA NVidia HDMI/DP,pcm:3
+ HDA NVidia HDMI/DP,pcm:7
+ HDA NVidia HDMI/DP,pcm:8
+ HDA NVidia HDMI/DP,pcm:9
+ HDA Intel Front Mic
+ HDA Intel Rear Mic
+ HDA Intel Line
+ HDA Intel Line Out Front
+ HDA Intel Line Out Surround
+ HDA Intel Line Out CLFE
+ HDA Intel Line Out Side
+ HDA Intel Front Headphone
+-Printers (CUPS)-
+Officejet_J6400         : <i>Default</i>
+Officejet_J6400_fax
+-SCSI Disks-
+ATA TOSHIBA HDWF180
+ASUS DRW-24B1ST
+ATA Samsung SSD 850
+Marvell 91xx Config
+
+
+
+Operating System
+----------------
+
+-Version-
+Kernel          : Linux 6.2.0-36-generic (x86_64)
+Version         : #37~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Oct  9 15:34:04 UTC 2
+C Library               : GNU C Library / (Ubuntu GLIBC 2.35-0ubuntu3.4) 2.35
+Distribution            : Ubuntu 22.04.3 LTS
+-Current Session-
+Computer Name           : daryl-old-pc
+User Name               : root (root)
+Language                : en_US.UTF-8 (en_US.UTF-8)
+Home Directory          : /root
+-Misc-
+Uptime          : 18 minutes
+Load Average            : 1.14, 1.66, 1.44
+Available entropy in /dev/random                : 256 bits (medium)
+
+
+Processor
+---------
+
+-Processors-
+Package Information
+Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz 0       0:0     3068.00 MHz
+Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz 1       0:1     3068.00 MHz
+Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz 2       0:2     3068.00 MHz
+Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz 3       0:3     3068.00 MHz
+Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz 4       0:0     3068.00 MHz
+Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz 5       0:1     3068.00 MHz
+Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz 6       0:2     3068.00 MHz
+Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz 7       0:3     3068.00 MHz
+
+
+
+Memory
+------
+
+-Memory-
+MemTotal        Total Memory    18396832 KiB
+MemFree Free Memory     14092264 KiB
+MemAvailable            16619864 KiB
+Buffers         230812 KiB
+Cached          2267776 KiB
+SwapCached      Cached Swap     0 KiB
+Active          960160 KiB
+Inactive                2593404 KiB
+Active(anon)            1912 KiB
+Inactive(anon)          1057276 KiB
+Active(file)            958248 KiB
+Inactive(file)          1536128 KiB
+Unevictable             32 KiB
+Mlocked         32 KiB
+SwapTotal       Virtual Memory  2097148 KiB
+SwapFree        Free Virtual Memory     2097148 KiB
+Zswap           0 KiB
+Zswapped                0 KiB
+Dirty           288 KiB
+Writeback               0 KiB
+AnonPages               1054544 KiB
+Mapped          357760 KiB
+Shmem           4724 KiB
+KReclaimable            384324 KiB
+Slab            521148 KiB
+SReclaimable            384324 KiB
+SUnreclaim              136824 KiB
+KernelStack             8708 KiB
+PageTables              15376 KiB
+SecPageTables           0 KiB
+NFS_Unstable            0 KiB
+Bounce          0 KiB
+WritebackTmp            0 KiB
+CommitLimit             11295564 KiB
+Committed_AS            3902096 KiB
+VmallocTotal            -1 KiB
+VmallocUsed             102484 KiB
+VmallocChunk            0 KiB
+Percpu          12160 KiB
+HardwareCorrupted               0 KiB
+AnonHugePages           0 KiB
+ShmemHugePages          0 KiB
+ShmemPmdMapped          0 KiB
+FileHugePages           0 KiB
+FilePmdMapped           0 KiB
+HugePages_Total         0
+HugePages_Free          0
+HugePages_Rsvd          0
+HugePages_Surp          0
+Hugepagesize            2048 KiB
+Hugetlb         0 KiB
+DirectMap4k             415232 KiB
+DirectMap2M             18450432 KiB
+
+
+USB Devices
+-----------
+
+-USB Devices-
+Linux Foundation 2.0 root hub
+Linux Foundation 1.1 root hub
+Linux Foundation 1.1 root hub
+Linux Foundation 1.1 root hub
+Linux Foundation 2.0 root hub
+Linux Foundation 1.1 root hub
+Logitech, Inc. Unifying Receiver
+Linux Foundation 1.1 root hub
+Linux Foundation 1.1 root hub
+Linux Foundation 2.0 root hub
+Linux Foundation 3.0 root hub
+
+Printers
+--------
+
+-Printers (CUPS)-
+Officejet_J6400         : <i>Default</i>
+Officejet_J6400_fax
+
+Battery
+-------
+
+-No batteries-
+No batteries found on this system
+
+Sensors
+-------
+
+-Sensors-
+ATK0110/fan1    Fan     2109.00RPM
+ATK0110/fan2    Fan     0.00RPM
+ATK0110/fan3    Fan     0.00RPM
+ATK0110/fan4    Fan     4218.00RPM
+ATK0110/fan5    Fan     0.00RPM
+ATK0110/temp1   Temperature     44.00°C
+ATK0110/temp2   Temperature     41.00°C
+ATK0110/temp3   Temperature     56.00°C
+ATK0110/in0     Voltage 1.25V
+ATK0110/in1     Voltage 3.26V
+ATK0110/in2     Voltage 5.09V
+ATK0110/in3     Voltage 12.02V
+../../../coretemp.0/temp2       Temperature     38.00°C
+../../../coretemp.0/temp3       Temperature     35.00°C
+../../../coretemp.0/temp4       Temperature     42.00°C
+../../../coretemp.0/temp5       Temperature     42.00°C
+
+
+Input Devices
+-------------
+
+-Input Devices-
+ Power Button
+ Power Button
+ Logitech Wireless Keyboard PID:4023
+ Logitech Wireless Mouse
+ HDA NVidia HDMI/DP,pcm:3
+ HDA NVidia HDMI/DP,pcm:7
+ HDA NVidia HDMI/DP,pcm:8
+ HDA NVidia HDMI/DP,pcm:9
+ HDA Intel Front Mic
+ HDA Intel Rear Mic
+ HDA Intel Line
+ HDA Intel Line Out Front
+ HDA Intel Line Out Surround
+ HDA Intel Line Out CLFE
+ HDA Intel Line Out Side
+ HDA Intel Front Headphone
+
+Storage
+-------
+
+-SCSI Disks-
+ATA TOSHIBA HDWF180
+ASUS DRW-24B1ST
+ATA Samsung SSD 850
+Marvell 91xx Config
+
+DMI
+---
+
+-Product-
+Name            : System Product Name
+Family          : To Be Filled By O.E.M.
+Vendor          : System manufacturer
+Version         : System Version
+-BIOS-
+Date            : 08/09/2012
+Vendor          : American Megatrends Inc. (American Megatrends, www.ami.com)
+Version         : 1402
+-Board-
+Name            : SABERTOOTH X58
+Vendor          : ASUSTeK Computer INC. (SEAGATE, www.seagate.com)
+Version         : Rev 1.xx
+Serial Number           : 107765850000998
+Asset Tag               : To Be Filled By O.E.M.
+-Chassis-
+Vendor          : Chassis Manufacture
+Type            : [3] Desktop
+Version         : Chassis Version
+Serial Number           : Chassis Serial Number
+Asset Tag               : Asset-1234567890
+
+
+CPU Blowfish
+------------
+
+-CPU Blowfish-
+Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz 8x 3068.00 MHz  2.54
+Intel(R) Pentium(R) D CPU 3.00GHz       2x 3000.00 MHz  10.84
+Intel(R) Celeron(R) CPU540@ 1.86GHz     1x 1861.00 MHz  25.49
+AMD Turion(tm) 64 X2 TL-58      2x 800.00 MHz   12.58
+
+
+
+CPU CryptoHash
+--------------
+
+-CPU CryptoHash-
+Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz 8x 3068.00 MHz  472.16
+Intel(R) Atom(TM) CPU330 @ 1.60GHz      4x 1596.00 MHz  105.57
+Intel(R) Core(TM)2 Duo CPU T5250@ 1.50GHz       2x 1500.00 MHz  102.95
+Intel(R) Celeron(R) M processor900MHz   1x 900.00 MHz   24.34
+
+
+CPU Fibonacci
+-------------
+
+-CPU Fibonacci-
+Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz 8x 3068.00 MHz  0.71
+AMD Phenom(tm) 9500 Quad-Core Processor 4x 1100.00 MHz  3.06
+Intel(R) Core(TM)2 Duo CPU T7250@ 2.00GHz       2x 2001.00 MHz  4.57
+Intel(R) Pentium(R) 4 CPU 2.80GHz       1x 2791.00 MHz  5.65
+AMD Athlon(tm) Processor        1x 1210.00 MHz  7.34
+Intel(R) Core(TM)2 CPU T5200@ 1.60GHz   2x 1067.00 MHz  7.27
+Intel(R) Atom(TM) CPU330 @ 1.60GHz      4x 1596.00 MHz  8.79
+
+
+
+
+CPU N-Queens
+------------
+
+-CPU N-Queens-
+Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz 8x 3068.00 MHz  8.59
+AMD Athlon(tm) 64 X2 Dual Core Processor 5400+  2x 1000.00 MHz  15.06
+Genuine Intel(R) CPU T2080@ 1.73GHz     2x 1730.00 MHz  33.31
+Intel(R) Core(TM)2 Duo CPU T5450@ 1.66GHz       2x 1660.00 MHz  14.49
+Intel(R) Core(TM)2 QuadCPU Q9300@ 2.50GHz       4x 3000.00 MHz  14.10
+Intel(R) Atom(TM) CPU Z530 @ 1.60GHz    2x 1600.00 MHz  18.70
+Intel(R) Atom(TM) CPU330 @ 1.60GHz      4x 1596.00 MHz  26.07
+AMD Athlon(tm) XP 1600+ 1x 1398.00 MHz  19.85
+
+
+
+CPU Zlib
+--------
+
+-CPU Zlib-
+Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz 8x 3068.00 MHz  0.64
+PowerPC 740/750 1x 280.00 MHz   2150.60
+
+FPU FFT
+-------
+
+-FPU FFT-
+Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz 8x 3068.00 MHz  2.27
+Intel(R) Pentium(R) DualCPUT3200@ 2.00GHz       2x 2000.00 MHz  5.50
+Intel(R) Celeron(R) CPU 2.53GHz 1x 2527.00 MHz  10.12
+Genuine Intel(R) CPU T1350@ 1.86GHz     1x 1867.00 MHz  83.47
+AMD Turion(tm) 64 X2 Mobile Technology TL-60    2x 2000.00 MHz  8.22
+AMD Turion(tm) X2 Dual-Core Mobile RM-70        2x 500.00 MHz   8.31
+
+
+
+
+FPU Raytracing
+--------------
+
+-FPU Raytracing-
+Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz 8x 3068.00 MHz  2.91
+Intel(R) Core(TM) Duo CPUT2450@ 2.00GHz 2x 2000.00 MHz  28.36
+AMD Athlon(tm) XP 2200+ 1x 1782.00 MHz  29.74
+Intel(R) Pentium(R) DualCPUT2370@ 1.73GHz       2x 1733.00 MHz  25.82
+AMD Sempron(tm) Processor 3200+ 1x 1000.00 MHz  30.19
+AMD Athlon(tm) 64 X2 Dual-Core Processor TK-55  2x 800.00 MHz   16.47
+Intel(R) Core(TM)2 CPU6600@ 2.40GHz     2x 2400.00 MHz  11.24
+Intel(R) Core(TM)2 Duo CPU T5270@ 1.40GHz       2x 1400.00 MHz  32.81
+AMD Athlon(tm) 64 X2 Dual-Core Processor TK-53  2x 800.00 MHz   18.47
+Intel(R) Pentium(R) M processor 1.86GHz 1x 1867.00 MHz  28.20
+Intel(R) Core(TM)2 Duo CPU T5750@ 2.00GHz       2x 1994.00 MHz  16.38
+AMD Turion(tm) 64 Mobile Technology ML-32       1x 800.00 MHz   28.43
+
+
+
