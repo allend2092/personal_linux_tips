@@ -1,0 +1,189 @@
+daryl@daryl-old-pc:~/PycharmProjects/harvest_data$ ethtool eth0
+Command 'ethtool' not found, but can be installed with:
+sudo apt install ethtool
+
+ sudo apt install ethtool
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libaccinj64-11.5 libcub-dev libcublas11 libcublaslt11 libcudart11.0 libcufft10 libcufftw10 libcupti-dev libcupti-doc libcupti11.5 libcurand10 libcusolver11 libcusolvermg11 libcusparse11 libegl-dev libgl-dev libgl1-mesa-dev
+  libgles-dev libgles1 libglvnd-core-dev libglvnd-dev libglx-dev libnppc11 libnppial11 libnppicc11 libnppidei11 libnppif11 libnppig11 libnppim11 libnppist11 libnppisu11 libnppitc11 libnpps11 libnvblas11 libnvidia-egl-wayland1
+  libnvjpeg11 libnvrtc-builtins11.5 libnvrtc11.2 libnvtoolsext1 libnvvm4 libopengl-dev libpthread-stubs0-dev libtbb-dev libtbb12 libtbbmalloc2 libthrust-dev libvdpau-dev libx11-dev libxatracker2 libxau-dev libxcb1-dev libxdmcp-dev
+  libxvmc1 node-html5shiv nvidia-cuda-gdb nvidia-cuda-toolkit-doc ocl-icd-opencl-dev opencl-c-headers opencl-clhpp-headers x11proto-dev xorg-sgml-doctools xserver-xorg-video-amdgpu xserver-xorg-video-ati xserver-xorg-video-fbdev
+  xserver-xorg-video-intel xserver-xorg-video-qxl xserver-xorg-video-radeon xserver-xorg-video-vesa xserver-xorg-video-vmware xtrans-dev
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  ethtool
+0 upgraded, 1 newly installed, 0 to remove and 5 not upgraded.
+Need to get 208 kB of archives.
+After this operation, 645 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu jammy/main amd64 ethtool amd64 1:5.16-1 [208 kB]
+Fetched 208 kB in 0s (537 kB/s)
+Selecting previously unselected package ethtool.
+(Reading database ... 227122 files and directories currently installed.)
+Preparing to unpack .../ethtool_1%3a5.16-1_amd64.deb ...
+Unpacking ethtool (1:5.16-1) ...
+Setting up ethtool (1:5.16-1) ...
+Processing triggers for man-db (2.10.2-1) ...
+
+
+sudo ethtool enp7s1 | grep Wake-on
+        Supports Wake-on: pumbg <---------------------- supported
+        Wake-on: d
+
+Supports Wake-on: pumbg
+This line shows the WoL capabilities that your network card supports. Each letter represents a different wake-up method:
+p - Wake on PHY activity.
+u - Wake on unicast messages.
+m - Wake on Magic Packet™.
+b - Wake on broadcast messages.
+g - Wake on generic packet (less common).
+Wake-on: d
+This line indicates the current WoL setting for the network interface. The d means that WoL is currently disabled.
+
+
+
+
+
+  ethtool enp7s1
+Settings for enp7s1:
+        Supported ports: [ TP    MII ]
+        Supported link modes:   10baseT/Half 10baseT/Full
+                                100baseT/Half 100baseT/Full
+                                1000baseT/Half 1000baseT/Full
+        Supported pause frame use: Symmetric Receive-only
+        Supports auto-negotiation: Yes
+        Supported FEC modes: Not reported
+        Advertised link modes:  10baseT/Half 10baseT/Full
+                                100baseT/Half 100baseT/Full
+                                1000baseT/Half 1000baseT/Full
+        Advertised pause frame use: Symmetric Receive-only
+        Advertised auto-negotiation: Yes
+        Advertised FEC modes: Not reported
+        Link partner advertised link modes:  10baseT/Half 10baseT/Full
+                                             100baseT/Half 100baseT/Full
+                                             1000baseT/Full
+        Link partner advertised pause frame use: Symmetric
+        Link partner advertised auto-negotiation: Yes
+        Link partner advertised FEC modes: Not reported
+        Speed: 1000Mb/s
+        Duplex: Full
+        Auto-negotiation: on
+        master-slave cfg: preferred slave
+        master-slave status: slave
+        Port: Twisted Pair
+        PHYAD: 0
+        Transceiver: external
+        MDI-X: Unknown
+netlink error: Operation not permitted
+        Link detected: yes
+
+
+
+
+
+  daryl@daryl-old-pc:~/PycharmProjects/harvest_data$ ethtool enp7s1
+Settings for enp7s1:
+        Supported ports: [ TP    MII ]
+        Supported link modes:   10baseT/Half 10baseT/Full
+                                100baseT/Half 100baseT/Full
+                                1000baseT/Half 1000baseT/Full
+        Supported pause frame use: Symmetric Receive-only
+        Supports auto-negotiation: Yes
+        Supported FEC modes: Not reported
+        Advertised link modes:  10baseT/Half 10baseT/Full
+                                100baseT/Half 100baseT/Full
+                                1000baseT/Half 1000baseT/Full
+        Advertised pause frame use: Symmetric Receive-only
+        Advertised auto-negotiation: Yes
+        Advertised FEC modes: Not reported
+        Link partner advertised link modes:  10baseT/Half 10baseT/Full
+                                             100baseT/Half 100baseT/Full
+                                             1000baseT/Full
+        Link partner advertised pause frame use: Symmetric
+        Link partner advertised auto-negotiation: Yes
+        Link partner advertised FEC modes: Not reported
+        Speed: 1000Mb/s
+        Duplex: Full
+        Auto-negotiation: on
+        master-slave cfg: preferred slave
+        master-slave status: slave
+        Port: Twisted Pair
+        PHYAD: 0
+        Transceiver: external
+        MDI-X: Unknown
+netlink error: Operation not permitted
+        Link detected: yes
+daryl@daryl-old-pc:~/PycharmProjects/harvest_data$ ethtool -k enp7s1
+Features for enp7s1:
+rx-checksumming: on
+tx-checksumming: on
+        tx-checksum-ipv4: on
+        tx-checksum-ip-generic: off [fixed]
+        tx-checksum-ipv6: off [fixed]
+        tx-checksum-fcoe-crc: off [fixed]
+        tx-checksum-sctp: off [fixed]
+scatter-gather: off
+        tx-scatter-gather: off
+        tx-scatter-gather-fraglist: off [fixed]
+tcp-segmentation-offload: off
+        tx-tcp-segmentation: off
+        tx-tcp-ecn-segmentation: off [fixed]
+        tx-tcp-mangleid-segmentation: off
+        tx-tcp6-segmentation: off [fixed]
+generic-segmentation-offload: off [requested on]
+generic-receive-offload: on
+large-receive-offload: off [fixed]
+rx-vlan-offload: off [fixed]
+tx-vlan-offload: on
+ntuple-filters: off [fixed]
+receive-hashing: off [fixed]
+highdma: off [fixed]
+rx-vlan-filter: off [fixed]
+vlan-challenged: off [fixed]
+tx-lockless: off [fixed]
+netns-local: off [fixed]
+tx-gso-robust: off [fixed]
+tx-fcoe-segmentation: off [fixed]
+tx-gre-segmentation: off [fixed]
+tx-gre-csum-segmentation: off [fixed]
+tx-ipxip4-segmentation: off [fixed]
+tx-ipxip6-segmentation: off [fixed]
+tx-udp_tnl-segmentation: off [fixed]
+tx-udp_tnl-csum-segmentation: off [fixed]
+tx-gso-partial: off [fixed]
+tx-tunnel-remcsum-segmentation: off [fixed]
+tx-sctp-segmentation: off [fixed]
+tx-esp-segmentation: off [fixed]
+tx-udp-segmentation: off [fixed]
+tx-gso-list: off [fixed]
+fcoe-mtu: off [fixed]
+tx-nocache-copy: off
+loopback: off [fixed]
+rx-fcs: off
+rx-all: off
+tx-vlan-stag-hw-insert: off [fixed]
+rx-vlan-stag-hw-parse: off [fixed]
+rx-vlan-stag-filter: off [fixed]
+l2-fwd-offload: off [fixed]
+hw-tc-offload: off [fixed]
+esp-hw-offload: off [fixed]
+esp-tx-csum-hw-offload: off [fixed]
+rx-udp_tunnel-port-offload: off [fixed]
+tls-hw-tx-offload: off [fixed]
+tls-hw-rx-offload: off [fixed]
+rx-gro-hw: off [fixed]
+tls-hw-record: off [fixed]
+rx-gro-list: off
+macsec-hw-offload: off [fixed]
+rx-udp-gro-forwarding: off
+hsr-tag-ins-offload: off [fixed]
+hsr-tag-rm-offload: off [fixed]
+hsr-fwd-offload: off [fixed]
+hsr-dup-offload: off [fixed]
+
+
+
+
+
